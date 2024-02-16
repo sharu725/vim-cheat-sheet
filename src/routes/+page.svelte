@@ -1,11 +1,11 @@
 <script>
   import { fly } from "svelte/transition";
 
-  let { data } = $props();
+  export let data;
   const { basic, all } = data;
-  
-  let search_input = $state("");
-  let search_results = $state(Object.entries(basic));
+
+  let search_input = "";
+  let search_results = Object.entries(basic);
 
   const search_cheats = () => {
     if (!search_input) {
