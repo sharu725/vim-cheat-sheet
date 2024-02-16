@@ -47,14 +47,19 @@
 </script>
 
 <div class="grid justify-items-center mt-10 w-full md:mt-40">
-  <input
-    class="px-4 py-3 rounded md:w-md"
-    type="text"
-    placeholder="insert..."
-    bind:value={search_input}
-    on:keyup={search_cheats}
-    autofocus
-  />
+  <div class="relative">
+    <input
+      class="px-4 py-3 rounded md:w-md"
+      type="text"
+      placeholder="insert..."
+      bind:value={search_input}
+      on:keyup={search_cheats}
+      autofocus
+    />
+    <div
+      class="i-skill-icons-vim-dark text-2xl opacity-40 absolute right-1 top-0 bottom-0 m-auto"
+    ></div>
+  </div>
   {#if search_results?.length}
     {#key search_results}
       <ul
