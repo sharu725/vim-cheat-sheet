@@ -1,0 +1,73 @@
+{
+  "h": {
+    "description": "Move left one character",
+    "synonym": "go to left 1 string"
+  },
+  "j": { "description": "Move down one line" },
+  "k": { "description": "Move up one line" },
+  "l": { "description": "Move right one character" },
+  "w": { "description": "Move forward one word" },
+  "b": { "description": "Move backward one word" },
+  "0": { "description": "Move to the beginning of the line" },
+  "^": { "description": "Move to the first non-blank character of the line" },
+  "$": { "description": "Move to the end of the line" },
+  "gg": { "description": "Move to the first line of the document" },
+  "G": { "description": "Move to the last line of the document" },
+  "H": { "description": "Move to the top of the screen" },
+  "M": { "description": "Move to the middle of the screen" },
+  "L": { "description": "Move to the bottom of the screen" },
+  "Ctrl+f": { "description": "Move forward one full screen" },
+  "Ctrl+b": { "description": "Move backward one full screen" },
+  "Ctrl+u": { "description": "Move up half a screen" },
+  "Ctrl+d": { "description": "Move down half a screen" },
+  "i": { "description": "Insert before the cursor" },
+  "I": { "description": "Insert at the beginning of the line" },
+  "a": { "description": "Insert after the cursor" },
+  "A": { "description": "Insert at the end of the line" },
+  "o": { "description": "Insert a new line below the current line" },
+  "O": { "description": "Insert a new line above the current line" },
+  "r": { "description": "Replace the character under the cursor" },
+  "x": { "description": "Delete the character under the cursor" },
+  "dd": {
+    "description": "Delete the current line",
+    "synonym": "cut entire full line"
+  },
+  "dw": {
+    "description": "Delete from the cursor to the end of the word",
+    "synonym": "cut from cursor to end"
+  },
+  "D": {
+    "description": "Delete from the cursor to the end of the line",
+    "synonym": "cut"
+  },
+  "yy": { "description": "Yank (copy) the current line" },
+  "yw": { "description": "Yank from the cursor to the end of the word" },
+  "p": { "description": "Paste after the cursor" },
+  "P": { "description": "Paste before the cursor" },
+  "u": { "description": "Undo" },
+  "Ctrl+r": { "description": "Redo" },
+  "/": { "description": "Search forward" },
+  "?": { "description": "Search backward" },
+  "n": { "description": "Repeat the last search in the same direction" },
+  "N": { "description": "Repeat the last search in the opposite direction" },
+  ":s/old/new/g": {
+    "description": "Replace all occurrences of 'old' with 'new' in the current line"
+  },
+  ":%s/old/new/g": {
+    "description": "Replace all occurrences of 'old' with 'new' in the entire document"
+  },
+  ":s/old/new/gc": {
+    "description": "Replace all occurrences of 'old' with 'new' in the current line with confirmation"
+  },
+  ":%s/old/new/gc": {
+    "description": "Replace all occurrences of 'old' with 'new' in the entire document with confirmation"
+  },
+  ":q": { "description": "Quit (if no changes have been made)" },
+  ":q!": { "description": "Quit without saving changes" },
+  ":w": { "description": "Save (write) the file" },
+  ":wq": { "description": "Save and quit" },
+  ":x": { "description": "Save and quit" },
+  ":wq!": { "description": "Save and quit forcefully" },
+  ":qa": { "description": "Quit all open windows" },
+  ":qa!": { "description": "Quit all open windows forcefully" }
+}

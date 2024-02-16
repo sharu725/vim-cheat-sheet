@@ -1,0 +1,18 @@
+{
+  "h": { "description": "Move left one character" },
+  "j": { "description": "Move down one line" },
+  "k": { "description": "Move up one line" },
+  "l": { "description": "Move right one character" },
+  "w": { "description": "Move forward one word" },
+  "b": { "description": "Move backward one word" },
+  "i": { "description": "Insert before the cursor" },
+  "dd": { "description": "Delete the current line" },
+  "yy": { "description": "Yank (copy) the current line" },
+  "p": { "description": "Paste after the cursor" },
+  "u": { "description": "Undo" },
+  "/": { "description": "Search forward" },
+  ":q": { "description": "Quit (if no changes have been made)" },
+  ":q!": { "description": "Quit without saving changes" },
+  ":w": { "description": "Save (write) the file" },
+  ":wq": { "description": "Save and quit" }
+}

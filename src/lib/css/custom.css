@@ -1,0 +1,29 @@
+body {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-size: 18px;
+  background-color: #121212;
+  color: #a5d7e8;
+  margin: 0;
+}
+
+input {
+  border: none;
+  background-color: #19376d;
+  color: #a5d7e8;
+  font-size: 18px;
+}
+
+input:focus {
+  outline-color: #19376d;
+}
+
+.search_results {
+  background-color: #202020;
+}
+
+code {
+  background-color: #121212;
+}
