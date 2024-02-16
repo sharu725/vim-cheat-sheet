@@ -1,8 +1,9 @@
 <script>
   import { fly } from "svelte/transition";
-  import data from "./data.json";
-  import basic from "./basic.json";
 
+  let { data } = $props();
+  const { basic, all } = data;
+  
   let search_input = $state("");
   let search_results = $state(Object.entries(basic));
 
@@ -12,10 +13,9 @@
       return;
     }
     const search_input_array = search_input.trim().split(/ /);
-    const results = Object.entries(data).filter(
+    const results = Object.entries(all).filter(
       ([key, { description, synonym }]) => {
         for (let i = 0; i < search_input_array.length; i++) {
-          console.log(search_input_array[i].length);
           if (search_input_array[i].length < 3) {
             if (
               key.toLowerCase().includes(search_input_array[i].toLowerCase())
