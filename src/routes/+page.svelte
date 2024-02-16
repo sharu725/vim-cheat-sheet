@@ -71,3 +71,11 @@
     {/key}
   {/if}
 </div>
+
+<footer>
+  <ul class="text-sm list-none">
+    <li>
+      <a href="https://github.com/sharu725/vim-cheat-sheet">Github</a>
+    </li>
+  </ul>
+</footer>
