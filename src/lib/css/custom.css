@@ -14,6 +14,7 @@ input {
   background-color: #19376d;
   color: #a5d7e8;
   font-size: 18px;
+  box-shadow: inset 0 0 15px #0c182f;
 }
 
 input:focus {

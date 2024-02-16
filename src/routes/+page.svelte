@@ -46,7 +46,7 @@
   };
 </script>
 
-<div class="grid justify-items-center mt-10 md:mt-40">
+<div class="grid justify-items-center mt-10 w-full md:mt-40">
   <input
     class="px-4 py-3 rounded md:w-md"
     type="text"
@@ -57,7 +57,10 @@
   />
   {#if search_results?.length}
     {#key search_results}
-      <ul in:fly={{ y: -30, duration: 600 }} class="search_results p-4 md:p-8">
+      <ul
+        in:fly={{ y: -30, duration: 600 }}
+        class="search_results p-4 w-auto md:min-w-md shadow"
+      >
         {#each search_results as [cheat, { description }]}
           <li class="flex flex-wrap items-center text-sm md:text-base">
             <code class="px-2 py-1 shrink-0">{cheat}</code>
@@ -68,10 +71,3 @@
     {/key}
   {/if}
 </div>
-
-<!-- {#each Object.entries(data) as [cheat, { description }]}
-  <li class="flex items-center">
-    <code>{cheat}</code>
-    <p class="ml-2">{description}</p>
-  </li>
-{/each} -->
