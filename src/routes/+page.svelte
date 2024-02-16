@@ -79,3 +79,11 @@
     </li>
   </ul>
 </footer>
+
+<svelte:head>
+  <title>Vim Cheat Sheet | Webjeda</title>
+  <meta
+    name="description"
+    content="A vim cheat sheet created for my personal vim, nvim learning journey."
+  />
+</svelte:head>
