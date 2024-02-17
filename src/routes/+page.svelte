@@ -67,7 +67,7 @@
     <input
       class="px-4 py-3 md:w-md"
       type="text"
-      placeholder="insert..."
+      placeholder="search..."
       bind:value={search_input}
       on:keyup={search_cheats}
       autofocus
