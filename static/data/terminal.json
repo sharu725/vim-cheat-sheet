@@ -1,0 +1,18 @@
+{
+  ":terminal": {
+    "description": "Open a new terminal window as a horizontal split - the terminal window opens above the current window unless splitbelow option is set; you can then use shell commands as you would normally do from a terminal"
+  },
+  ":vertical :terminal": {
+    "description": "Open a new terminal window as a vertical split - the terminal window opens to the left of the current window unless splitright option is set"
+  },
+  "Ctrl+w w or Ctrl+w": {
+    "description": "Move to the next window - helps you to easily switch back and forth if you have one text editing window and one terminal window; see the Splitting section discussed earlier in this chapter for more such commands"
+  },
+  "Ctrl+w N": {
+    "description": "Goes to Terminal-Normal mode which will help you to move around using Normal mode commands, copy text, etc (note that you need to use uppercase N here)"
+  },
+  "Ctrl+\\ Ctrl+n": {
+    "description": "Another way to go to Terminal-Normal mode"
+  },
+  "Ctrl+w :": { "description": "Go to Command-line mode from terminal window" }
+}

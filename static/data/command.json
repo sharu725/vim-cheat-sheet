@@ -1,0 +1,121 @@
+{
+  ":w": { "description": "Save changes (:w is short for :write)" },
+  ":w filename": {
+    "description": "Provide a filename if it is a new file or if you want to save to another file"
+  },
+  ":w >> filename": {
+    "description": "Append to an existing file (use w! to create a new file if it doesn't exist)"
+  },
+  ":wa": { "description": "Save all changed buffers (:wa is short for :wall)" },
+  ":q": {
+    "description": "Quit the current window (:q is short for :quit) - if other windows/tabs are present, they will remain open; you will get an error message if there are unsaved changes"
+  },
+  ":qa": {
+    "description": "Quit all (:qa is short for :quitall) - you will get an error message if there are unsaved changes"
+  },
+  ":confirm qa": {
+    "description": "Similar to quit all, but provides a prompt for every file that has unsaved changes"
+  },
+  ":wq": { "description": "Save changes and quit" },
+  ":wqa": { "description": "Save changes for all files and quit" },
+  ":e": {
+    "description": "Refreshes the current buffer (:e is short for :edit)"
+  },
+  ":e filename": {
+    "description": "Open a particular file by its path, in the same window"
+  },
+  ":e #": {
+    "description": "Switch back to the previous buffer (won't work if that buffer is not named); :e# can also be used (no space between e and #)"
+  },
+  "Ctrl+6": {
+    "description": "Switch back to the previous buffer, works even if that buffer is not named; Ctrl+^ can also be used"
+  },
+  ":e #1": { "description": "Open the first buffer" },
+  ":e #2": { "description": "Open the second buffer, and so on" },
+  ":buffers": {
+    "description": "Show all buffers (:ls or :files can also be used)"
+  },
+  ":bn": {
+    "description": "Open the next file in the buffer list (:bn is short for :bnext) - opens the first buffer if you are on the last buffer"
+  },
+  ":bp": {
+    "description": "Open the previous file in the buffer list (:bp is short for :bprevious) - opens the last buffer if you are on the first buffer"
+  },
+  ":tabe filename": {
+    "description": "Open the given file in a new tab (:tabe is short for :tabedit) - if filename isn't specified, you'll get an unnamed empty window; by default, the new tab is opened to the right of the current tab; :0tabe opens as the first tab; :$tabe opens as the last tab; see :h :tabe for more details and features"
+  },
+  ":tabn": {
+    "description": "Switch to the next tab (:tabn is short for :tabnext) - if tabs to the right are exhausted, switch to the first tab; gt and Ctrl+Page Down can also be used; 2gt switch to the second tab (the number specified is absolute, not relative)"
+  },
+  ":tabp": {
+    "description": "Switch to the previous tab (:tabp is short for :tabprevious) - if tabs to the left are exhausted, switch to the last tab; gT and Ctrl+Page Up can also be used"
+  },
+  ":tabr": {
+    "description": "Switch to the first tab (:tabr is short for :tabrewind) - :tabfirst can also be used"
+  },
+  ":tabl": {
+    "description": "Switch to the last tab (:tabl is short for :tablast)"
+  },
+  ":tabm N": {
+    "description": "Move the current tab to after N tabs from the start (:tabm is short for :tabmove) - :tabm 0 moves the current tab to the beginning; :tabm moves the current tab to the end"
+  },
+  ":tabm +N": {
+    "description": "Move the current tab N positions to the right"
+  },
+  ":tabm -N": { "description": "Move the current tab N positions to the left" },
+  ":split filename": {
+    "description": "Open file for editing in a new horizontal window, above the current window - you can also use :sp instead of :split; :set splitbelow open horizontal splits below the current window"
+  },
+  ":vsplit filename": {
+    "description": "Open file for editing in a new vertical window, to the left of the current window - you can also use :vs instead of :vsplit; :set splitright open vertical splits to the right of the current window"
+  },
+  "Ctrl+w w": {
+    "description": "Switch to the below/right window for horizontal/vertical splits respectively - Ctrl+w Ctrl+w also performs the same function; switches to the first split if you are on the last split"
+  },
+  "Ctrl+w W": {
+    "description": "Switch to the above/left window for horizontal/vertical splits respectively - switches to the last split if you are on the first split"
+  },
+  "Ctrl+w hjkl or arrow keys": {
+    "description": "Switch in the respective direction"
+  },
+  "Ctrl+w t or b": {
+    "description": "Switch to the top (first) or bottom (last) window"
+  },
+  "Ctrl+w HJKL (uppercase)": {
+    "description": "Moves the current split to the farthest possible location in the respective direction"
+  },
+  ":d": {
+    "description": "Delete the current line (:d is short for :delete command)"
+  },
+  ":.w filename": {
+    "description": "Save the current line (represented by .) to the given filename - recall that by default :w works on the entire file"
+  },
+  ":5d": { "description": "Delete the fifth line" },
+  ":$d": { "description": "Delete the last line (represented by $)" },
+  ":25m0": {
+    "description": "Move the twenty-fifth line to the start of the file (:m is short for :move command) - the number following m is the line number after which you want to place the lines specified by the range; use :t (or :co or :copy) command if you want to copy instead of moving"
+  },
+  ":2,10d": {
+    "description": "Delete second to tenth lines (comma is used here to separate start and end ranges)"
+  },
+  ":5,$d": { "description": "Delete fifth line to the last line" },
+  ":5,$-1d": { "description": "Delete fifth line to the last but one line" },
+  ":%d": {
+    "description": "Delete all the lines (% is a shortcut for 1,$ range)"
+  },
+  ":/pat1/,/pat2/d": {
+    "description": "Delete the matching range of lines in the forward direction from the current cursor position (forward because / is used) - if there are multiple matches, only the first such range will be deleted; use ?pattern? to find a match in the backward direction; you can also mix these two types of direction if needed"
+  },
+  ":/pat1/;+1d": {
+    "description": "Delete the line matching pat1 as well as the line after (total 2 lines) - using ; will set the line matched by the first pair of the range as the current line for the second pair"
+  },
+  ":/pat1/;-2d": {
+    "description": "Delete the line matching pat1 as well as two lines before (total 3 lines)"
+  },
+  ":5;/pat1/d": {
+    "description": "Delete from fifth line to a line matching pat1 after the fifth line - note the use of ; again here, the search will be based on the current cursor line if you use , instead of ;"
+  },
+  ":'a,'bd": {
+    "description": "Delete from the line marked by a to the line marked by b"
+  }
+}

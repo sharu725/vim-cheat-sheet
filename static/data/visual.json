@@ -1,0 +1,23 @@
+{
+  "v": {
+    "description": "Visually select the current character"
+  },
+  "ve": { "description": "Selects till the end of a word" },
+  "vip": { "description": "Selects a paragraph (text object) and so on" },
+  "V": {
+    "description": "Visually select the current line, you can extend this using motion commands"
+  },
+  "Vgg": {
+    "description": "Selects the current line and then extends to the start of the file"
+  },
+  "Ctrl+v": { "description": "Visually select column(s)" },
+  "Ctrl+v followed by 3j2l": { "description": "Selects a 4x3 block" },
+  "gv": { "description": "Select previously highlighted visual area" },
+  "o": {
+    "description": "Move the cursor to the diagonally opposite corner of the visual selection"
+  },
+  "O": {
+    "description": "Move the cursor to the other corner of the current line in visual block selection"
+  },
+  "Esc": { "description": "Go back to Normal mode" }
+}

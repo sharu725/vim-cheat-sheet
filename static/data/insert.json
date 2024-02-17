@@ -1,0 +1,22 @@
+{
+  "Escape": { "description": "Return to normal mode" },
+  "Backspace": { "description": "Move one character to the left" },
+  "Delete or Ctrl + h": { "description": "Delete one character to the right" },
+  "Ctrl + a": { "description": "Move to the beginning of the line" },
+  "Ctrl + e": { "description": "Move to the end of the line" },
+  "Ctrl + l": {
+    "description": "Clear the screen and display only the current line"
+  },
+  "Ctrl + k": { "description": "Delete the character under the cursor" },
+  "Ctrl + d": { "description": "Delete the character before the cursor" },
+  "Ctrl + f": { "description": "Delete the character after the cursor" },
+  "Ctrl + q": { "description": "Delete the entire line" },
+  "Tab": { "description": "Autocomplete" },
+  "Enter": { "description": "Complete from a list" },
+  "Ctrl + g": { "description": "Beep" },
+  "Ctrl + t": { "description": "Toggle spell check" },
+  "Ctrl + b": { "description": "Indent line" },
+  "Ctrl + p": { "description": "Un-indent line" },
+  "Ctrl + left arrow": { "description": "Move left five characters" },
+  "Ctrl + right arrow": { "description": "Move right five characters" }
+}

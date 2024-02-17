@@ -1,19 +1,23 @@
 <script>
   import { fly } from "svelte/transition";
+  import { modes } from "$lib/constants";
 
   export let data;
-  const { basic, all } = data;
 
   let search_input = "";
-  let search_results = Object.entries(basic);
+  let dataSource = "basic";
+  let search_results = Object.entries(data[dataSource]);
+  let currentModeTitle = modes[0].title;
+
+  const updateDataSource = (slug, title) => {
+    dataSource = slug;
+    search_results = Object.entries(data[dataSource]);
+    currentModeTitle = title;
+  };
 
   const search_cheats = () => {
-    if (!search_input) {
-      search_results = Object.entries(basic);
-      return;
-    }
     const search_input_array = search_input.trim().split(/ /);
-    const results = Object.entries(all).filter(
+    const results = Object.entries(data[dataSource]).filter(
       ([key, { description, synonym }]) => {
         for (let i = 0; i < search_input_array.length; i++) {
           if (search_input_array[i].length < 3) {
@@ -46,10 +50,22 @@
   };
 </script>
 
-<div class="grid justify-items-center mt-10 w-full md:mt-40">
-  <div class="relative">
+<div class="grid justify-items-center mt-10 w-full md:mt-30">
+  <h2 class="font-bold text-blue-400 mb-2">{currentModeTitle}</h2>
+  <div class="flex space-x-4 mb-2">
+    {#each modes as { slug, title, icon }}
+      <button
+        class="text-2xl {icon}"
+        class:text-gray-400={slug != dataSource}
+        class:text-blue-400={slug == dataSource}
+        {title}
+        on:click={() => updateDataSource(slug, title)}
+      ></button>
+    {/each}
+  </div>
+  <div class="relative z-30">
     <input
-      class="px-4 py-3 rounded md:w-md"
+      class="px-4 py-3 md:w-md"
       type="text"
       placeholder="insert..."
       bind:value={search_input}
@@ -64,10 +80,10 @@
     {#key search_results}
       <ul
         in:fly={{ y: -30, duration: 600 }}
-        class="search_results p-4 w-auto md:min-w-md shadow"
+        class="search_results p-4 w-auto md:min-w-md md:max-w-3xl"
       >
         {#each search_results as [cheat, { description }]}
-          <li class="flex flex-wrap items-center text-sm md:text-base">
+          <li class="flex flex-wrap items-center text-sm md:text-base mb-2">
             <code class="px-2 py-1 shrink-0">{cheat}</code>
             <p class="ml-2">{description}</p>
           </li>
@@ -76,14 +92,6 @@
     {/key}
   {/if}
 </div>
-
-<footer>
-  <ul class="text-sm list-none">
-    <li>
-      <a href="https://github.com/sharu725/vim-cheat-sheet">Github</a>
-    </li>
-  </ul>
-</footer>
 
 <svelte:head>
   <title>Vim Cheat Sheet | Webjeda</title>
