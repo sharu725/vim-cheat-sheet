@@ -11,13 +11,13 @@ export default defineConfig({
     }),
   ],
   safelist: [
-    "i-map:low-vision-access",
+    "i-fa6-solid:bold",
     "i-nonicons:vim-normal-mode-16",
     "i-nonicons:vim-insert-mode-16",
     "i-nonicons:vim-visual-mode-16",
     "i-nonicons:vim-replace-mode-16",
     "i-nonicons:vim-command-mode-16",
     "i-nonicons:vim-terminal-mode-16",
-    "i-solar:infinity-bold",
+    "i-fa6-solid:e",
   ],
 });

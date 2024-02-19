@@ -1,41 +1,41 @@
 {
   ": s/a/b/": {
-    "descriptiom": "Replace the first occurrence of a with b on the current line only - you can also use :. s/a/b/ (recall that . represents the current line) - the delimiter after the replacement string is optional in this case"
+    "description": "Replace the first occurrence of a with b on the current line only - you can also use :. s/a/b/ (recall that . represents the current line) - the delimiter after the replacement string is optional in this case"
   },
   ":2 s/apple/Mango/i": {
-    "descriptiom": "Replace the first occurrence of apple with Mango on the second line only - i flag matches the searchpattern case insensitively"
+    "description": "Replace the first occurrence of apple with Mango on the second line only - i flag matches the searchpattern case insensitively"
   },
   ":3,6 s/call/jump/g": {
-    "descriptiom": "Replace all the occurrences of call with jump on lines 3 to 6 - g flag performs search and replace for all the matching occurrences"
+    "description": "Replace all the occurrences of call with jump on lines 3 to 6 - g flag performs search and replace for all the matching occurrences"
   },
   ":5,$ s/call/jump/g": {
-    "descriptiom": "Replace all the occurrences of call with jump from the fifth line to the end of the file"
+    "description": "Replace all the occurrences of call with jump from the fifth line to the end of the file"
   },
   ":% s/call/jump/g": {
-    "descriptiom": "Replace all the occurrences of call in the file with jump - recall that % is a shortcut for the range 1,$"
+    "description": "Replace all the occurrences of call in the file with jump - recall that % is a shortcut for the range 1,$"
   },
   ":g/call/d": {
-    "descriptiom": "Delete all lines containing call - similar to the d Normal mode command, the deleted contents will be saved to the default \" register"
+    "description": "Delete all lines containing call - similar to the d Normal mode command, the deleted contents will be saved to the default \" register"
   },
   ":g/call/d a": {
-    "descriptiom": "In addition to the default register, the deleted content will also be stored in the \"a register"
+    "description": "In addition to the default register, the deleted content will also be stored in the \"a register"
   },
   ":g/call/d _": {
-    "descriptiom": "Deleted content won't be saved anywhere, since it uses the black hole register"
+    "description": "Deleted content won't be saved anywhere, since it uses the black hole register"
   },
   ":g/^#/t0": {
-    "descriptiom": "Copy all lines starting with # to the start of the file"
+    "description": "Copy all lines starting with # to the start of the file"
   },
   ":1,5 g/call/d": {
-    "descriptiom": "Delete all lines containing call only for the first five lines"
+    "description": "Delete all lines containing call only for the first five lines"
   },
   ":v/jump/d": {
-    "descriptiom": "Delete all lines not containing jump - same as :g!/jump/d"
+    "description": "Delete all lines not containing jump - same as :g!/jump/d"
   },
   ":g/cat/ s/animal/mammal/g": {
-    "descriptiom": "Replace animal with mammal only for the lines containing cat"
+    "description": "Replace animal with mammal only for the lines containing cat"
   },
   ":.,.+20 g/^#/ normal >>": {
-    "descriptiom": "Indent the current line and the next 20 lines only if the line starts with #"
+    "description": "Indent the current line and the next 20 lines only if the line starts with #"
   }
 }

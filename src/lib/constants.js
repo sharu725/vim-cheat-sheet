@@ -2,7 +2,7 @@ export const modes = [
   {
     title: "I don't know how to exit Vim Mode Mode",
     slug: "basic",
-    icon: "i-map:low-vision-access",
+    icon: "i-fa6-solid:bold",
   },
   {
     title: "Normal Mode",
@@ -37,6 +37,7 @@ export const modes = [
   {
     title: "All Shortcuts",
     slug: "all",
-    icon: "i-solar:infinity-bold",
+    icon: "i-fa6-solid:e",
+    big: true,
   },
 ];
